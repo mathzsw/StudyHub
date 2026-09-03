@@ -1,7 +1,9 @@
 const express = require('express');
 const { engine } = require('express-handlebars');
 const sequelize = require('../database/database');
+const materiasRoutes = require('./routes/materias');
 
+require('./models');
 const app = express();
 
 app.engine('hbs', engine({
@@ -14,6 +16,8 @@ app.set('views', './src/views');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use('/materias', materiasRoutes);
+
 app.get('/', (req, res) => {
     res.render('home', { layout: false });
 });
@@ -25,6 +29,8 @@ async function startServer() {
         await sequelize.authenticate();
 
         console.log('Banco de dados conectado.');
+
+        await sequelize.sync();
 
         app.listen(PORT, () => {
             console.log(`StudyHub rodando em http://localhost:${PORT}`);

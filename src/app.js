@@ -1,5 +1,6 @@
 const express = require('express');
 const { engine } = require('express-handlebars');
+const sequelize = require('../database/database');
 
 const app = express();
 
@@ -10,12 +11,27 @@ app.engine('hbs', engine({
 app.set('view engine', 'hbs');
 app.set('views', './src/views');
 
-const PORT = 3001;
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.render('home', { layout: false });
 });
 
-app.listen(PORT, () => {
-    console.log(`StudyHub rodando em http://localhost:${PORT}`);
-});
+const PORT = 3001;
+
+async function startServer() {
+    try {
+        await sequelize.authenticate();
+
+        console.log('Banco de dados conectado.');
+
+        app.listen(PORT, () => {
+            console.log(`StudyHub rodando em http://localhost:${PORT}`);
+        });
+    } catch (error) {
+        console.error('Erro ao conectar ao banco:', error);
+    }
+}
+
+startServer();

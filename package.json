@@ -1,0 +1,24 @@
+{
+  "name": "studyhub",
+  "version": "1.0.0",
+  "description": "Sistema web para organização de estudos.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "keywords": [
+    "studyhub",
+    "education",
+    "nodejs",
+    "express"
+  ],
+  "author": "Matheus Augusto Rodrigues de Alencar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.3",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
+  }
+}

@@ -16,9 +16,18 @@
   "author": "Matheus Augusto Rodrigues de Alencar",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0",
-    "express-handlebars": "^8.0.3",
-    "sequelize": "^6.37.7",
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.7",
+    "sequelize": "^6.37.8",
     "sqlite3": "^5.1.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathzsw/studyhub.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mathzsw/studyhub/issues"
+  },
+  "homepage": "https://github.com/mathzsw/studyhub#readme"
 }

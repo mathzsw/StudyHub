@@ -1,48 +1,144 @@
-# StudyHub
+# 📚 StudyHub
 
-Sistema web para organização de estudos.
+> **Organize your studies. Keep your routine under control.**
 
-> Projeto de portfólio desenvolvido para praticar desenvolvimento web e criar uma ferramenta simples para centralizar a rotina de estudos.
+Sistema web para organização de estudos, desenvolvido para centralizar **matérias, tarefas e provas** em um único lugar.
 
-## 🎯 Objetivo
+[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)](https://github.com/mathzsw/studyhub)
+[![Node.js](https://img.shields.io/badge/Node.js-runtime-green)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/license-TBD-lightgrey)](https://github.com/mathzsw/studyhub)
 
-O StudyHub tem como objetivo ajudar estudantes a organizar matérias, tarefas e provas em um único lugar.
+---
 
-## 🚧 Status
+## 🎯 Sobre o projeto
 
-Em desenvolvimento.
+O **StudyHub** é um projeto de portfólio criado para praticar desenvolvimento web e aplicar, na prática, conceitos de **backend, banco de dados, organização de projeto e desenvolvimento incremental**.
+
+A proposta é simples: oferecer ao estudante um espaço para acompanhar sua rotina acadêmica sem depender de várias ferramentas diferentes.
+
+## ✨ Funcionalidades
+
+### Planejadas
+
+- 📚 Cadastro e gerenciamento de matérias
+- 📝 Cadastro e gerenciamento de tarefas
+- 📅 Cadastro e gerenciamento de provas
+- 📊 Dashboard com resumo da rotina de estudos
+- 📈 Acompanhamento de desempenho acadêmico
+- 📱 Interface responsiva e intuitiva
+
+> O projeto está em desenvolvimento. As funcionalidades serão liberadas conforme cada etapa do roadmap for concluída.
 
 ## 🛠️ Tecnologias
 
-- Node.js
-- Express
-- Handlebars
-- Sequelize
-- SQLite
-- HTML5
-- CSS3
-- JavaScript
+| Tecnologia | Utilização |
+|---|---|
+| **Node.js** | Runtime da aplicação |
+| **Express** | Servidor e rotas |
+| **Handlebars** | Templates das páginas |
+| **Sequelize** | ORM e persistência de dados |
+| **SQLite** | Banco de dados |
+| **HTML5** | Estrutura das páginas |
+| **CSS3** | Estilização e responsividade |
+| **JavaScript** | Comportamento da aplicação |
 
-## 📌 Roadmap
+## 🏗️ Estrutura do projeto
 
-- [ ] Estrutura inicial do projeto
+```text
+studyhub/
+├── database/
+│   └── database.js
+├── src/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── views/
+│   └── public/
+│       ├── css/
+│       └── js/
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+A arquitetura será expandida conforme novas funcionalidades forem implementadas.
+
+## 🚀 Como executar
+
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org/) instalado
+- Git instalado
+
+### Instalação
+
+```bash
+git clone https://github.com/mathzsw/studyhub.git
+cd studyhub
+npm install
+```
+
+### Executar em desenvolvimento
+
+```bash
+npm run dev
+```
+
+A aplicação será iniciada em:
+
+```text
+http://localhost:3001
+```
+
+### Executar normalmente
+
+```bash
+npm start
+```
+
+## 📋 Metodologia de desenvolvimento
+
+O projeto segue uma organização inspirada em **Scrum e boas práticas de desenvolvimento colaborativo**.
+
+O fluxo principal é:
+
+```text
+Issue → Branch → Desenvolvimento → Testes → Commit → Push → Pull Request → Review → Merge
+```
+
+As funcionalidades são organizadas em **User Stories**, enquanto tarefas de implementação são registradas separadamente para manter o backlog rastreável.
+
+## 🗺️ Roadmap
+
+### 🚀 Sprint 1 — Core
+
+- [x] Estrutura inicial do projeto
 - [ ] Cadastro e gerenciamento de matérias
 - [ ] Gerenciamento de tarefas
 - [ ] Cadastro de provas
+
+### 🎯 Sprint 2 — Dashboard & UX
+
 - [ ] Dashboard de estudos
 - [ ] Melhorias de interface e experiência do usuário
+
+### 📊 Sprint 3 — Desempenho
+
 - [ ] Estatísticas de desempenho
+- [ ] Indicadores de evolução acadêmica
 
-## 📂 Estrutura
+## 📌 Status
 
-A estrutura do projeto será documentada conforme as funcionalidades forem implementadas.
+**Em desenvolvimento — Sprint 1**
 
-## ▶️ Como executar
-
-As instruções de instalação e execução serão adicionadas após a configuração inicial do projeto.
+> O objetivo atual é entregar o núcleo funcional do sistema antes de avançar para recursos de dashboard e análise de desempenho.
 
 ## 👨‍💻 Autor
 
-Matheus Augusto Rodrigues de Alencar
+**Matheus Augusto Rodrigues de Alencar**
 
-GitHub: [@mathzsw](https://github.com/mathzsw)
+- GitHub: [@mathzsw](https://github.com/mathzsw)
+
+---
+
+⭐ Se o projeto for útil ou interessante, considere acompanhar sua evolução.

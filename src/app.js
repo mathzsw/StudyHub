@@ -1,6 +1,7 @@
 const express = require('express');
 const { engine } = require('express-handlebars');
 const sequelize = require('../database/database');
+const materiasRoutes = require('./routes/materias');
 
 const app = express();
 
@@ -14,6 +15,8 @@ app.set('views', './src/views');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use('/api/materias', materiasRoutes);
+
 app.get('/', (req, res) => {
     res.render('home', { layout: false });
 });
@@ -23,6 +26,7 @@ const PORT = 3001;
 async function startServer() {
     try {
         await sequelize.authenticate();
+        await sequelize.sync();
 
         console.log('Banco de dados conectado.');
 

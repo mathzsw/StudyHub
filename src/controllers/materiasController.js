@@ -65,9 +65,21 @@ async function excluir(req, res) {
     res.status(204).send();
 }
 
+async function pagina(req, res) {
+    const materias = await Materia.findAll();
+
+    const materiasView = materias.map(materia => materia.toJSON());
+
+    res.render('materias/index', {
+        materias: materiasView,
+        layout: false
+    });
+}
+
 module.exports = {
     listar,
     criar,
     atualizar,
-    excluir
+    excluir,
+    pagina
 };

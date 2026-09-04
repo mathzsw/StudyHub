@@ -2,6 +2,7 @@ const express = require('express');
 const { engine } = require('express-handlebars');
 const sequelize = require('../database/database');
 const materiasRoutes = require('./routes/materias');
+const tarefasRoutes = require('./routes/tarefas');
 
 require('./models');
 const app = express();
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use(express.static('src/public'));
 
 app.use('/materias', materiasRoutes);
+app.use('/tarefas', tarefasRoutes);
 
 app.get('/', (req, res) => {
     res.render('home', { layout: false });

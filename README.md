@@ -4,43 +4,46 @@
 
 Sistema web para organização de estudos, desenvolvido para centralizar **matérias, tarefas e provas** em um único lugar.
 
-[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)](https://github.com/mathzsw/studyhub)
+[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)](https://github.com/mathzsw/StudyHub)
 [![Node.js](https://img.shields.io/badge/Node.js-runtime-green)](https://nodejs.org/)
-[![License](https://img.shields.io/badge/license-TBD-lightgrey)](https://github.com/mathzsw/studyhub)
+[![License](https://img.shields.io/badge/license-ISC-lightgrey)](https://opensource.org/licenses/ISC)
 
 ---
 
 ## 🎯 Sobre o projeto
 
-O **StudyHub** é um projeto de portfólio criado para praticar desenvolvimento web e aplicar, na prática, conceitos de **backend, banco de dados, organização de projeto e desenvolvimento incremental**.
+O **StudyHub** é um projeto de portfólio criado para praticar desenvolvimento web e aplicar, na prática, conceitos de **backend, banco de dados, arquitetura em camadas e desenvolvimento incremental**.
 
-A proposta é simples: oferecer ao estudante um espaço para acompanhar sua rotina acadêmica sem depender de várias ferramentas diferentes.
+A proposta é simples: oferecer ao estudante um espaço para organizar sua rotina acadêmica sem depender de várias ferramentas diferentes.
 
 ## ✨ Funcionalidades
 
-### Planejadas
+### ✅ Implementadas
 
-- 📚 Cadastro e gerenciamento de matérias
-- 📝 Cadastro e gerenciamento de tarefas
+- 📚 Cadastro, visualização, edição e exclusão de matérias
+- 💾 Persistência das matérias em SQLite através do Sequelize
+- 🔎 Validação do nome obrigatório da matéria
+- 📱 Interface responsiva para gerenciamento de matérias
+
+### 🚧 Em desenvolvimento
+
+- 📝 Gerenciamento de tarefas
 - 📅 Cadastro e gerenciamento de provas
-- 📊 Dashboard com resumo da rotina de estudos
-- 📈 Acompanhamento de desempenho acadêmico
-- 📱 Interface responsiva e intuitiva
-
-> O projeto está em desenvolvimento. As funcionalidades serão liberadas conforme cada etapa do roadmap for concluída.
+- 📊 Dashboard de estudos
+- 📈 Estatísticas e indicadores de desempenho
 
 ## 🛠️ Tecnologias
 
 | Tecnologia | Utilização |
 |---|---|
 | **Node.js** | Runtime da aplicação |
-| **Express** | Servidor e rotas |
+| **Express** | Servidor e rotas HTTP |
 | **Handlebars** | Templates das páginas |
 | **Sequelize** | ORM e persistência de dados |
 | **SQLite** | Banco de dados |
 | **HTML5** | Estrutura das páginas |
 | **CSS3** | Estilização e responsividade |
-| **JavaScript** | Comportamento da aplicação |
+| **JavaScript** | Interações no frontend |
 
 ## 🏗️ Estrutura do projeto
 
@@ -58,10 +61,11 @@ studyhub/
 │       └── js/
 ├── .gitignore
 ├── package.json
+├── package-lock.json
 └── README.md
 ```
 
-A arquitetura será expandida conforme novas funcionalidades forem implementadas.
+A aplicação utiliza uma separação entre **rotas, controllers, models, views e arquivos públicos**, permitindo evoluir o projeto sem concentrar toda a lógica em um único arquivo.
 
 ## 🚀 Como executar
 
@@ -73,49 +77,47 @@ A arquitetura será expandida conforme novas funcionalidades forem implementadas
 ### Instalação
 
 ```bash
-git clone https://github.com/mathzsw/studyhub.git
-cd studyhub
+git clone https://github.com/mathzsw/StudyHub.git
+cd StudyHub
 npm install
 ```
 
-### Executar em desenvolvimento
+### Desenvolvimento
 
 ```bash
 npm run dev
 ```
 
-A aplicação será iniciada em:
-
-```text
-http://localhost:3001
-```
-
-### Executar normalmente
+### Execução normal
 
 ```bash
 npm start
 ```
 
+A aplicação ficará disponível em:
+
+```text
+http://localhost:3001
+```
+
 ## 📋 Metodologia de desenvolvimento
 
-O projeto segue uma organização inspirada em **Scrum e boas práticas de desenvolvimento colaborativo**.
-
-O fluxo principal é:
+O projeto segue um fluxo inspirado em boas práticas de desenvolvimento colaborativo:
 
 ```text
 Issue → Branch → Desenvolvimento → Testes → Commit → Push → Pull Request → Review → Merge
 ```
 
-As funcionalidades são organizadas em **User Stories**, enquanto tarefas de implementação são registradas separadamente para manter o backlog rastreável.
+As funcionalidades são organizadas em **User Stories**, enquanto as tarefas técnicas são acompanhadas separadamente para manter o backlog rastreável.
 
 ## 🗺️ Roadmap
 
 ### 🚀 Sprint 1 — Core
 
 - [x] Estrutura inicial do projeto
-- [ ] Cadastro e gerenciamento de matérias
+- [x] Cadastro e gerenciamento de matérias
 - [ ] Gerenciamento de tarefas
-- [ ] Cadastro de provas
+- [ ] Cadastro e gerenciamento de provas
 
 ### 🎯 Sprint 2 — Dashboard & UX
 
@@ -127,11 +129,11 @@ As funcionalidades são organizadas em **User Stories**, enquanto tarefas de imp
 - [ ] Estatísticas de desempenho
 - [ ] Indicadores de evolução acadêmica
 
-## 📌 Status
+## 📌 Status atual
 
 **Em desenvolvimento — Sprint 1**
 
-> O objetivo atual é entregar o núcleo funcional do sistema antes de avançar para recursos de dashboard e análise de desempenho.
+O núcleo do gerenciamento de matérias já está implementado. O próximo foco é ampliar o sistema com tarefas e provas antes de avançar para dashboard e estatísticas.
 
 ## 👨‍💻 Autor
 

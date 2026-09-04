@@ -4,19 +4,26 @@
 
 # 📚 StudyHub
 
-**Organize seus estudos. Mantenha sua rotina sob controle.**
+### Organize seus estudos. Mantenha sua rotina sob controle.
 
 Sistema web para centralizar matérias, tarefas e provas em um único lugar.
 
 [![Status](https://img.shields.io/badge/status-em%20desenvolvimento-3B82F6?style=flat-square)](https://github.com/mathzsw/StudyHub)
 [![Node.js](https://img.shields.io/badge/Node.js-runtime-3B82F6?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-backend-151A23?style=flat-square&logo=express&logoColor=white)](https://expressjs.com/)
 [![License](https://img.shields.io/badge/license-ISC-8B5CF6?style=flat-square)](https://opensource.org/licenses/ISC)
 
 </div>
 
 ---
 
-## ✦ Sobre o StudyHub
+<div align="center">
+
+**Organize. Estude. Evolua.**
+
+</div>
+
+## 🔷 Sobre o StudyHub
 
 O **StudyHub** é uma aplicação web criada para transformar a organização acadêmica em uma experiência simples e centralizada.
 
@@ -57,6 +64,8 @@ Além do produto, o projeto também funciona como um laboratório prático de de
 
 ```text
 StudyHub/
+├── assets/
+│   └── StudyHub.png
 ├── database/
 │   └── database.js
 ├── src/
@@ -148,7 +157,7 @@ As funcionalidades são planejadas através de **User Stories** e tarefas técni
 
 ## 📌 Status
 
-> **Em desenvolvimento — Sprint 1**
+> 🔵 **Em desenvolvimento — Sprint 1**
 
 O núcleo de **Matérias** já está funcionando. O próximo passo é expandir o sistema para tarefas e provas e, posteriormente, construir o dashboard e os recursos de acompanhamento de desempenho.
 

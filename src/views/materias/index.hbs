@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Matérias | StudyHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header class="page-header">
+
+            <div>
+                <span class="page-kicker">ORGANIZAÇÃO</span>
+
+                <h1>Matérias</h1>
+
+                <p>
+                    Organize suas matérias e acompanhe seus estudos.
+                </p>
+            </div>
+
+            <button
+                type="button"
+                class="btn btn-primary"
+                id="btnNovaMateria"
+            >
+                + Nova matéria
+            </button>
+
+        </header>
+
+        <main class="subjects-section">
+
+            <div class="subjects-grid">
+
+                {{#each materias}}
+
+                <article class="subject-card">
+
+                    <div class="subject-card-header">
+
+                        <div class="subject-icon">
+                            PW
+                        </div>
+
+                        <div class="subject-actions">
+
+                            <button
+                                type="button"
+                                class="btn-icon btn-editar"
+                                title="Editar"
+                                data-id="{{id}}"
+                                data-nome="{{nome}}"
+                                data-descricao="{{descricao}}"
+                            >
+                                ✎
+                            </button>
+
+                            <button
+                                type="button"
+                                class="btn-icon btn-excluir"
+                                title="Excluir"
+                                data-id="{{id}}"
+                            >
+                                ×
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <h2>{{nome}}</h2>
+
+                    <p>
+                        {{descricao}}
+                    </p>
+
+                    <div class="subject-card-footer">
+                        <span>0 tarefas</span>
+                        <span>03/09/2026</span>
+                    </div>
+
+                </article>
+
+                {{/each}}
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <div id="modalMateria" class="modal">
+
+        <div class="modal-content">
+
+            <h2>Nova matéria</h2>
+
+            <input
+                type="text"
+                id="nomeMateria"
+                placeholder="Nome da matéria"
+            >
+
+            <textarea
+                id="descricaoMateria"
+                placeholder="Descrição"
+            ></textarea>
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    id="fecharModal"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    type="button"
+                    id="salvarMateria"
+                >
+                    Salvar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/js/materias.js"></script>
+
+</body>
+
+</html>

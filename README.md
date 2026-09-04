@@ -1,54 +1,62 @@
+<div align="center">
+
+<img src="assets/StudyHub.png" alt="StudyHub" width="900">
+
 # 📚 StudyHub
 
-> **Organize seus estudos. Mantenha sua rotina sob controle.**
+**Organize seus estudos. Mantenha sua rotina sob controle.**
 
-Sistema web para organização de estudos, desenvolvido para centralizar **matérias, tarefas e provas** em um único lugar.
+Sistema web para centralizar matérias, tarefas e provas em um único lugar.
 
-[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)](https://github.com/mathzsw/StudyHub)
-[![Node.js](https://img.shields.io/badge/Node.js-runtime-green)](https://nodejs.org/)
-[![License](https://img.shields.io/badge/license-ISC-lightgrey)](https://opensource.org/licenses/ISC)
+[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-3B82F6?style=flat-square)](https://github.com/mathzsw/StudyHub)
+[![Node.js](https://img.shields.io/badge/Node.js-runtime-3B82F6?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/license-ISC-8B5CF6?style=flat-square)](https://opensource.org/licenses/ISC)
+
+</div>
 
 ---
 
-## 🎯 Sobre o projeto
+## ✦ Sobre o StudyHub
 
-O **StudyHub** é um projeto de portfólio criado para praticar desenvolvimento web e aplicar, na prática, conceitos de **backend, banco de dados, arquitetura em camadas e desenvolvimento incremental**.
+O **StudyHub** é uma aplicação web criada para transformar a organização acadêmica em uma experiência simples e centralizada.
 
-A proposta é simples: oferecer ao estudante um espaço para organizar sua rotina acadêmica sem depender de várias ferramentas diferentes.
+A ideia é reunir, em um só lugar, aquilo que o estudante precisa acompanhar no dia a dia: **matérias, tarefas, provas e evolução dos estudos**.
 
-## ✨ Funcionalidades
+Além do produto, o projeto também funciona como um laboratório prático de desenvolvimento web, aplicando **backend, banco de dados, arquitetura em camadas e desenvolvimento incremental**.
 
-### ✅ Implementadas
+## 🚀 Funcionalidades
+
+### ✅ Disponível
 
 - 📚 Cadastro, visualização, edição e exclusão de matérias
-- 💾 Persistência das matérias em SQLite através do Sequelize
-- 🔎 Validação do nome obrigatório da matéria
-- 📱 Interface responsiva para gerenciamento de matérias
+- 💾 Persistência de dados com SQLite + Sequelize
+- 🔎 Validação de campos obrigatórios
+- 📱 Interface responsiva
 
-### 🚧 Em desenvolvimento
+### 🔜 Próximos recursos
 
 - 📝 Gerenciamento de tarefas
 - 📅 Cadastro e gerenciamento de provas
 - 📊 Dashboard de estudos
 - 📈 Estatísticas e indicadores de desempenho
 
-## 🛠️ Tecnologias
+## 🛠️ Stack
 
-| Tecnologia | Utilização |
+| Tecnologia | Papel no projeto |
 |---|---|
 | **Node.js** | Runtime da aplicação |
-| **Express** | Servidor e rotas HTTP |
-| **Handlebars** | Templates das páginas |
-| **Sequelize** | ORM e persistência de dados |
-| **SQLite** | Banco de dados |
-| **HTML5** | Estrutura das páginas |
+| **Express** | Servidor e API |
+| **Handlebars** | Renderização das páginas |
+| **Sequelize** | ORM e acesso ao banco |
+| **SQLite** | Persistência dos dados |
+| **JavaScript** | Lógica e interações |
+| **HTML5** | Estrutura da interface |
 | **CSS3** | Estilização e responsividade |
-| **JavaScript** | Interações no frontend |
 
-## 🏗️ Estrutura do projeto
+## 🏗️ Arquitetura
 
 ```text
-studyhub/
+StudyHub/
 ├── database/
 │   └── database.js
 ├── src/
@@ -65,82 +73,97 @@ studyhub/
 └── README.md
 ```
 
-A aplicação utiliza uma separação entre **rotas, controllers, models, views e arquivos públicos**, permitindo evoluir o projeto sem concentrar toda a lógica em um único arquivo.
+A aplicação separa responsabilidades entre **routes, controllers, models, views e arquivos públicos**, mantendo o código organizado e preparado para novas funcionalidades.
 
-## 🚀 Como executar
+## 💻 Executando localmente
 
 ### Pré-requisitos
 
 - [Node.js](https://nodejs.org/) instalado
 - Git instalado
 
-### Instalação
+### 1. Clone o repositório
 
 ```bash
 git clone https://github.com/mathzsw/StudyHub.git
 cd StudyHub
+```
+
+### 2. Instale as dependências
+
+```bash
 npm install
 ```
 
-### Desenvolvimento
+### 3. Inicie o projeto
+
+Para desenvolvimento:
 
 ```bash
 npm run dev
 ```
 
-### Execução normal
+Ou, para execução normal:
 
 ```bash
 npm start
 ```
 
-A aplicação ficará disponível em:
+Acesse:
 
 ```text
 http://localhost:3001
 ```
 
-## 📋 Metodologia de desenvolvimento
+## 📋 Fluxo de desenvolvimento
 
-O projeto segue um fluxo inspirado em boas práticas de desenvolvimento colaborativo:
+O StudyHub é desenvolvido de forma incremental, seguindo um fluxo organizado:
 
 ```text
-Issue → Branch → Desenvolvimento → Testes → Commit → Push → Pull Request → Review → Merge
+Issue → Branch → Desenvolvimento → Testes → Commit → Pull Request → Review → Merge
 ```
 
-As funcionalidades são organizadas em **User Stories**, enquanto as tarefas técnicas são acompanhadas separadamente para manter o backlog rastreável.
+As funcionalidades são planejadas através de **User Stories** e tarefas técnicas, mantendo o desenvolvimento rastreável e permitindo evoluir o projeto por etapas.
 
 ## 🗺️ Roadmap
 
 ### 🚀 Sprint 1 — Core
 
-- [x] Estrutura inicial do projeto
-- [x] Cadastro e gerenciamento de matérias
+- [x] Estrutura inicial
+- [x] Gerenciamento de matérias
 - [ ] Gerenciamento de tarefas
-- [ ] Cadastro e gerenciamento de provas
+- [ ] Gerenciamento de provas
 
 ### 🎯 Sprint 2 — Dashboard & UX
 
 - [ ] Dashboard de estudos
-- [ ] Melhorias de interface e experiência do usuário
+- [ ] Melhorias de UX e navegação
+- [ ] Calendário acadêmico
 
 ### 📊 Sprint 3 — Desempenho
 
 - [ ] Estatísticas de desempenho
-- [ ] Indicadores de evolução acadêmica
+- [ ] Indicadores de evolução
+- [ ] Visão geral da rotina acadêmica
 
-## 📌 Status atual
+## 📌 Status
 
-**Em desenvolvimento — Sprint 1**
+> **Em desenvolvimento — Sprint 1**
 
-O núcleo do gerenciamento de matérias já está implementado. O próximo foco é ampliar o sistema com tarefas e provas antes de avançar para dashboard e estatísticas.
+O núcleo de **Matérias** já está funcionando. O próximo passo é expandir o sistema para tarefas e provas e, posteriormente, construir o dashboard e os recursos de acompanhamento de desempenho.
 
 ## 👨‍💻 Autor
 
 **Matheus Augusto Rodrigues de Alencar**
 
-- GitHub: [@mathzsw](https://github.com/mathzsw)
+[![GitHub](https://img.shields.io/badge/GitHub-@mathzsw-151A23?style=flat-square&logo=github)](https://github.com/mathzsw)
 
 ---
 
-⭐ Se o projeto for útil ou interessante, considere acompanhar sua evolução.
+<div align="center">
+
+**StudyHub** · Organize. Estude. Evolua.
+
+⭐ Se você curtir o projeto, acompanhe sua evolução.
+
+</div>

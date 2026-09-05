@@ -5,8 +5,8 @@ const router = express.Router();
 
 router.get('/', materiasController.listar);
 router.post('/', materiasController.criar);
+router.get('/pagina', materiasController.pagina);
 router.put('/:id', materiasController.atualizar);
 router.delete('/:id', materiasController.excluir);
-router.get('/pagina', materiasController.pagina);
 
 module.exports = router;

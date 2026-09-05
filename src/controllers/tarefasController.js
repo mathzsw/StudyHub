@@ -1,5 +1,25 @@
 const { Tarefa, Materia } = require('../models');
 
+const STATUS_VALIDOS = ['pendente', 'em_andamento', 'concluida'];
+
+function validarDados({ titulo, status, materiaId }) {
+    if (!titulo || titulo.trim() === '') {
+        return 'O título da tarefa é obrigatório.';
+    }
+
+    const materiaIdNumerico = Number(materiaId);
+
+    if (!Number.isInteger(materiaIdNumerico) || materiaIdNumerico <= 0) {
+        return 'A matéria da tarefa é obrigatória.';
+    }
+
+    if (status && !STATUS_VALIDOS.includes(status)) {
+        return 'Status da tarefa inválido.';
+    }
+
+    return null;
+}
+
 async function listar(req, res) {
     const tarefas = await Tarefa.findAll({
         include: Materia
@@ -11,19 +31,13 @@ async function listar(req, res) {
 async function criar(req, res) {
     const { titulo, descricao, prazo, status, materiaId } = req.body;
 
-    if (!titulo || titulo.trim() === '') {
-        return res.status(400).json({
-            erro: 'O título da tarefa é obrigatório.'
-        });
+    const erro = validarDados({ titulo, status, materiaId });
+
+    if (erro) {
+        return res.status(400).json({ erro });
     }
 
-    if (!materiaId) {
-        return res.status(400).json({
-            erro: 'A matéria da tarefa é obrigatória.'
-        });
-    }
-
-    const materia = await Materia.findByPk(materiaId);
+    const materia = await Materia.findByPk(Number(materiaId));
 
     if (!materia) {
         return res.status(404).json({
@@ -32,11 +46,11 @@ async function criar(req, res) {
     }
 
     const tarefa = await Tarefa.create({
-        titulo,
-        descricao,
-        prazo,
-        status,
-        materiaId
+        titulo: titulo.trim(),
+        descricao: descricao?.trim() || null,
+        prazo: prazo || null,
+        status: status || 'pendente',
+        materiaId: Number(materiaId)
     });
 
     res.status(201).json(tarefa);
@@ -54,19 +68,13 @@ async function atualizar(req, res) {
         });
     }
 
-    if (!titulo || titulo.trim() === '') {
-        return res.status(400).json({
-            erro: 'O título da tarefa é obrigatório.'
-        });
+    const erro = validarDados({ titulo, status, materiaId });
+
+    if (erro) {
+        return res.status(400).json({ erro });
     }
 
-    if (!materiaId) {
-        return res.status(400).json({
-            erro: 'A matéria da tarefa é obrigatória.'
-        });
-    }
-
-    const materia = await Materia.findByPk(materiaId);
+    const materia = await Materia.findByPk(Number(materiaId));
 
     if (!materia) {
         return res.status(404).json({
@@ -74,11 +82,11 @@ async function atualizar(req, res) {
         });
     }
 
-    tarefa.titulo = titulo;
-    tarefa.descricao = descricao;
-    tarefa.prazo = prazo;
+    tarefa.titulo = titulo.trim();
+    tarefa.descricao = descricao?.trim() || null;
+    tarefa.prazo = prazo || null;
     tarefa.status = status || 'pendente';
-    tarefa.materiaId = materiaId;
+    tarefa.materiaId = Number(materiaId);
 
     await tarefa.save();
 

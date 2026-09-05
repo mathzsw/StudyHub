@@ -36,13 +36,15 @@ Além do produto, o projeto também funciona como um laboratório prático de de
 ### ✅ Disponível
 
 - 📚 Cadastro, visualização, edição e exclusão de matérias
+- 📝 API de cadastro, consulta, edição e exclusão de tarefas
+- 🔗 Associação de tarefas às matérias
 - 💾 Persistência de dados com SQLite + Sequelize
-- 🔎 Validação de campos obrigatórios
+- 🔎 Validação de campos obrigatórios e dados de tarefas
 - 📱 Interface responsiva
 
 ### 🔜 Próximos recursos
 
-- 📝 Gerenciamento de tarefas
+- 📝 Interface de gerenciamento de tarefas
 - 📅 Cadastro e gerenciamento de provas
 - 📊 Dashboard de estudos
 - 📈 Estatísticas e indicadores de desempenho
@@ -140,7 +142,8 @@ As funcionalidades são planejadas através de **User Stories** e tarefas técni
 
 - [x] Estrutura inicial
 - [x] Gerenciamento de matérias
-- [ ] Gerenciamento de tarefas
+- [x] Backend de tarefas
+- [ ] Interface de gerenciamento de tarefas
 - [ ] Gerenciamento de provas
 
 ### 🎯 Sprint 2 — Dashboard & UX
@@ -159,7 +162,7 @@ As funcionalidades são planejadas através de **User Stories** e tarefas técni
 
 > 🔵 **Em desenvolvimento — Sprint 1**
 
-O núcleo de **Matérias** já está funcionando. O próximo passo é expandir o sistema para tarefas e provas e, posteriormente, construir o dashboard e os recursos de acompanhamento de desempenho.
+O núcleo de **Matérias** está funcionando e o backend de **Tarefas** já possui modelo, relacionamentos e operações CRUD. O próximo passo é construir a interface de tarefas, depois avançar para provas e, posteriormente, para o dashboard e os recursos de acompanhamento de desempenho.
 
 ## 👨‍💻 Autor
 

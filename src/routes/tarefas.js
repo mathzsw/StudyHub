@@ -3,6 +3,7 @@ const tarefasController = require('../controllers/tarefasController');
 
 const router = express.Router();
 
+router.get('/pagina', tarefasController.pagina);
 router.get('/', tarefasController.listar);
 router.post('/', tarefasController.criar);
 router.put('/:id', tarefasController.atualizar);

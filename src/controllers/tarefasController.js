@@ -109,9 +109,21 @@ async function excluir(req, res) {
     res.status(204).send();
 }
 
+async function pagina(req, res) {
+    const tarefas = await Tarefa.findAll({
+        include: Materia
+    });
+
+    res.render('tarefas/index', {
+        tarefas: tarefas.map(tarefa => tarefa.toJSON()),
+        layout: false
+    });
+}
+
 module.exports = {
     listar,
     criar,
     atualizar,
-    excluir
+    excluir,
+    pagina
 };

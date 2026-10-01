@@ -21,6 +21,11 @@ const Tarefa = sequelize.define('Tarefa', {
         type: DataTypes.ENUM('pendente', 'em_andamento', 'concluida'),
         allowNull: false,
         defaultValue: 'pendente'
+    },
+
+    materiaId: {
+        type: DataTypes.INTEGER,
+        allowNull: false
     }
 });
 
